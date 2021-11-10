@@ -8,7 +8,7 @@ function F1Data() {
 
   const fetchdata = () => {
     axios
-      .get(`http://ergast.com/api/f1/current/last/results.json`)
+      .get(`http://ergast.com/api/f1/seasons/results.json`)
       .then((res) => setRaceResults(res.data.MRData.RaceTable.Races))
       .catch((err) => console.log(err.response));
     console.log(raceResults);
