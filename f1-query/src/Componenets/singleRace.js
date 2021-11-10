@@ -4,7 +4,8 @@ import * as React from 'react';
 function SingleRace(raceRound) {
   return (
     <>
-      <div>{raceRound}</div>
+      <p>{raceRound.round}</p>
+      <p>{raceRound.raceName}</p>
     </>
   );
 }
