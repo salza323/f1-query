@@ -4,8 +4,9 @@ import * as React from 'react';
 function SingleRace(raceRound) {
   return (
     <>
-      <p>{raceRound.round}</p>
-      <p>{raceRound.raceName}</p>
+      <p>SingleRace</p>
+      {/* <p>{raceRound.raceRound.date}</p> */}
+      <p>{raceRound.raceRound.raceName}</p>
     </>
   );
 }

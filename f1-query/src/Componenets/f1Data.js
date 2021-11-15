@@ -8,7 +8,7 @@ function F1Data() {
 
   const fetchdata = () => {
     axios
-      .get(`http://ergast.com/api/f1/seasons/results.json`)
+      .get(`http://ergast.com/api/f1/current/last/results.json`)
       .then((res) => setRaceResults(res.data.MRData.RaceTable.Races))
       .catch((err) => console.log(err.response));
     console.log(raceResults);
@@ -24,8 +24,9 @@ function F1Data() {
   return (
     <div className='f1-data'>
       <div className='individual-data'>
+        <p>F1Data</p>
         {raceResults.map((raceRound, index) => (
-          <SingleRace key={index} singleRace={raceRound} />
+          <SingleRace key={index} raceRound={raceRound} />
         ))}
       </div>
     </div>
